@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account</title>
+</head>
+<style>
+  body {
+	font-family: Arial, sans-serif;
+	background-color: #f3f3f3;
+	margin: 0;
+	padding: 0;
+  }
+  
+  .container {
+	max-width: 400px;
+	margin: 40px auto;
+	background-color: #fff;
+	border-radius: 4px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+  }
+  
+  .logo {
+	text-align: center;
+	margin-bottom: 20px;
+  }
+  
+  .logo img {
+	max-width: 250px;
+  }
+  
+  .form-container h2 {
+	margin-top: 0;
+	text-align: center;
+  }
+  
+  .form-group {
+	margin-bottom: 20px;
+  }
+  
+  .form-group label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group select {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+  }
+  
+  .mobile-input {
+	display: flex;
+  }
+  
+  .mobile-input select {
+	margin-right: 10px;
+  }
+  
+  .btn {
+	width: 100%;
+	background-color: #f0c14b;
+	color: #111;
+	border: none;
+	padding: 10px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: bold;
+  }
+  
+  .btn:hover {
+	background-color: #e0b347;
+  }
+  
+  p {
+	text-align: center;
+	margin-top: 20px;
+  }
+  
+  a {
+	color: #0066c0;
+	text-decoration: none;
+  }
+  
+  a:hover {
+	text-decoration: underline;
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="./images/amazon_PNG13.png" alt="Logo">
+    </div>
+    <div class="form-container">
+      <h2>Create Account</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Your name</label>
+          <input type="text" id="name" placeholder="First and last name" required>
+        </div>
+        <div class="form-group">
+          <label for="mobile">Mobile number</label>
+          <div class="mobile-input">
+            <select id="country-code">
+              <option value="+91">IN +91</option>
+              <option value="+1">US +1</option>
+              <option value="+44">UK +44</option>
+              <option value="+61">AU +61</option>
+              <option value="+65">SG +65</option>
+              <option value="+86">CN +86</option>
+              <option value="+33">FR +33</option>
+              <option value="+49">DE +49</option>
+            </select>
+            <input type="tel" id="mobile" placeholder="Mobile number" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="At least 6 characters" required>
+          <small>Passwords must be at least 6 characters.</small>
+        </div>
+		<p>To verify your number we will send a text message with a temporary code. Message a data rates may apply.</p>
+        <button type="submit" class="btn">Verify mobile number</button>
+      </form>
+	  <p>Buying for work? <a href="#">Create a free business account</a></p>
+      <p>Already have an account? <a href="#">Sign in</a></p>
+      <p>By creating an account or logging in, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy Policy</a>.</p>
+    </div>
+  </div>
+</body>
+</html>
+

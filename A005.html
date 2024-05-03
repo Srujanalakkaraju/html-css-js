@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: #fff;
+    background-image: url('./images/bg.jpg');
+    background-size: contain;
+}
+
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('header-bg.jpg') no-repeat center/cover;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #e50914;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.sign-in {
+    background-color: #e50914;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.header-content {
+    max-width: 600px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.header-content h4{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.header-content p {
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    border: white 3px;
+}
+
+input[type="email"] {
+    padding: 12px;
+    width: 300px;
+    border-radius: 4px 0 0 4px;
+    background-color: transparent;
+}
+
+.language-dropdown select {
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    padding: 5px;
+    margin-left: 550px;
+    border: white 1px solid;
+    border-radius: 5%;
+}
+
+.language-dropdown option{
+    color: black;
+}
+.logo img {
+    height: 40px;
+}
+
+button[type="submit"] {
+    background-color: #e50914;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.features {
+    background-color: #000;
+    padding: 50px;
+}
+
+.feature {
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.feature-content {
+    max-width: 500px;
+    align-items: right;
+}
+
+.feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.feature-content {
+    max-width: 500px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.feature-content {
+    max-width: 500px;
+}
+.feature-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.feature-content p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.feature img {
+    max-width: 500px;
+}
+footer {
+    background-color: black;
+    color: #737373;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-top {
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    font-size: 0.7rem;
+}
+
+.link-group {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.link-group a {
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.language-selector {
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  
+  .bottom-section {
+    text-align: center;
+  }
+</style>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./images/netflix-logo.png" alt="Netflix Logo">
+            </div>
+            <div class="language-dropdown">
+                <select>
+                    <option value="en">English</option>
+                    <option value="hi">Hindi</option>
+                </select>
+            </div>
+            <a href="#" class="sign-in">Sign In</a>
+        </nav>
+        <div class="header-content">
+            <h1>Unlimited movies, TV shows, and more.</h1>
+            <h4>Watch anywhere. Cancel anytime.</h4>
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+            <form>
+                <input type="email" placeholder="Email address" required>
+                <button type="submit">Get Started ></button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <section class="features">
+            <div class="feature">
+                <div class="feature-content">
+                    <h2>Enjoy on your TV.</h2>
+                    <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+                </div>
+                <img src="./images/tv.png" alt="TV">
+            </div>
+            <div class="feature">
+                <div class="feature-content">
+                    <h2>Download your shows to watch offline.</h2>
+                    <p>Save your favorites easily and always have something to watch.</p>
+                </div>
+                <img src="./images/mobile.jpg" alt="Mobile">
+            </div>
+            <div class="feature">
+                <div class="feature-content">
+                    <h2>Watch everywhere.</h2>
+                    <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+                </div>
+                <img src="./images/device.png" alt="Devices">
+            </div>
+            <div class="feature">
+                <div class="feature-content">
+                    <h2>Create profiles for kids.</h2>
+                    <p>Send children on adventures with their favourite characters in a space made just for them—free with your membership.</p>
+                </div>
+                <img src="./images/kids.png" alt="kids">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <footer>
+            <div class="footer-top">
+                <p>Questions? Call 000-800-919-1694</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <a href="#">FAQ</a>
+                    <a href="#">Investor Relations</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Speed Test</a>
+                </div>
+                <div class="link-group">
+                    <a href="#">Help Centre</a>
+                    <a href="#">Jobs</a>
+                    <a href="#">Cookie Preferences</a>
+                    <a href="#">Legal Notices</a>
+                </div>
+                <div class="link-group">
+                    <a href="#">Account</a>
+                    <a href="#">Ways to Watch</a>
+                    <a href="#">Corporate Information</a>
+                    <a href="#">Only on Netflix</a>
+                </div>
+                <div class="link-group">
+                    <a href="#">Media Centre</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <div class="language-select">
+                    <select>
+                        <option value="en">English</option>
+                        <option value="hi">Hindi</option>
+                    </select>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Netflix India</p>
+            </div>
+        </footer>
+    </footer>
+</body>
+</html>
+

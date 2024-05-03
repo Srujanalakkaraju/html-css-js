@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>This is my First Website</title>
+</head>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: #DCEDC8;
+  }
+  
+  .header {
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main-section {
+    background-color: #1E90FF;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 20px 40px;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  
+  .footer {
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="header">
+      <marquee behavior="scroll" direction="left">This is my First Website</marquee>
+    </div>
+    <div class="content">
+      <div class="main-section">
+        <h1>MERN Full Stack</h1>
+      </div>
+    </div>
+    <div class="footer">
+      <p>COPYRIGHTS @2024</p>
+    </div>
+  </div>
+</body>
+</html>

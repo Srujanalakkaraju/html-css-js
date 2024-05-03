@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAILWAY</title>
+</head>
+<style>
+  .ticket-booking-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ticket-booking-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .ticket-booking-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .ticket-booking-form input[type="text"],
+  .ticket-booking-form input[type="date"],
+  .ticket-booking-form select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .ticket-booking-form .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .ticket-booking-form .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+  }
+  
+  .ticket-booking-form .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+  }
+
+  .ticket-booking-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: url('./images/railway.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .ticket-booking-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: -1;
+  }
+</style>
+<body>
+    <div class="ticket-booking-container">
+        <form class="ticket-booking-form">
+          <div class="form-group">
+            <label for="from">From:</label>
+            <input type="text" id="from" name="from" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="to">To:</label>
+            <input type="text" id="to" name="to" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="class">Class:</label>
+            <select id="class" name="class" required>
+              <option value="">Select Class</option>
+              <option value="general">General</option>
+              <option value="persons-with-disability">Persons with Disability Concession</option>
+              <option value="flexible-with-date">Flexible With Date</option>
+              <option value="train-with-available-berth">Train with Available Berth</option>
+              <option value="railway-pass-concession">Railway Pass Concession</option>
+            </select>
+          </div>
+      
+          <div class="form-group">
+            <input type="checkbox" id="search" name="search">
+            <label for="search">Search</label>
+          </div>
+      
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Book Ticket</button>
+            <button type="button" class="btn btn-secondary">Try Booking in Aas DISHA 2.0</button>
+          </div>
+        </form>
+      </div>
+</body>
+</html>

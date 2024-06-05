@@ -276,7 +276,7 @@ function initApp(){
             <img src="images/${value.image}">
             <div class="title">${value.name}</div>
             <div class="price">₹${value.price.toLocaleString()}</div>
-            <button id="b${value.id}" onclick="addToCart(${value.id - 1})">Add To Cart</button>`;
+            <button id="b${value.id}" onclick="addToCard(${value.id - 1})">Add To Card</button>`;
         list.append(newDiv);
     }
 }

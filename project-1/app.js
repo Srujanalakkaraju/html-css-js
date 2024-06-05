@@ -13,6 +13,7 @@ closeShopping.addEventListener('click', ()=>{
     body.classList.remove('active');
 })
 
+
 let products = [
     {
         id: 1,
@@ -255,42 +256,29 @@ let products = [
         price: 80
     }
 ];
-let listCards = [];
-
-function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-}
-
-let shuffledProducts = shuffleArray([...products]);
+let listCards  = [];
 
 function initApp(){
-    for (const key in shuffledProducts) {
+    for (const key in products) {
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
-        value = shuffledProducts[key]
+        value = products[key]
         newDiv.innerHTML = `
             <img src="images/${value.image}">
             <div class="title">${value.name}</div>
             <div class="price">₹${value.price.toLocaleString()}</div>
-            <button id="b${value.id}" onclick="addToCard(${value.id - 1})">Add To Card</button>`;
+            <button id="b${key}" onclick="addToCart(${key})">Add To Cart</button>`;
         list.append(newDiv);
-    }
 }
-
+}
 initApp();
-
-function addToCard(key){
+function addToCart(key){
     if(listCards[key] == null){
         listCards[key] = JSON.parse(JSON.stringify(products[key]));
         listCards[key].quantity = 1;
     }
     reloadCard();
 }
-
 function reloadCard(){
     listCard.innerHTML = '';
     let count = 0;
@@ -315,11 +303,11 @@ function reloadCard(){
     total.innerText = totalPrice.toLocaleString();
     quantity.innerText = count;
 }
-
 function changeQuantity(key, quantity){
     if(quantity == 0){
         delete listCards[key];
-    } else {
+        
+    }else{
         listCards[key].quantity = quantity;
         listCards[key].price = parseInt(quantity) * parseInt(products[key].price);
     }
